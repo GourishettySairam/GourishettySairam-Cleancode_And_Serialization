@@ -1,0 +1,53 @@
+package com.epam.CLEANCODE_AND_SERIALIZATION;
+
+import java.util.Scanner;
+
+public class Interest {
+
+	public static void main(String[] args) 
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		
+			System.out.println("choose one option");
+			System.out.println("1.Simple Interest");
+			System.out.println("2.Compound Interest");
+			System.out.println("choose ur option");
+			switch(sc.nextInt()) 
+			{
+				case 1:
+					System.out.println("Enter principal amount");
+					double principal=sc.nextDouble();
+					System.out.println("Enter rate of interest");
+					double rateOfInterest = sc.nextDouble();
+					System.out.println("Enter time ");
+					int time = sc.nextInt();
+					double SimpleInterest = SimpleInterest_CompoundInterest.simpleInterest(principal, time, rateOfInterest);
+					System.out.println("simple interest is "+SimpleInterest);
+					break;
+					
+				case 2:
+					System.out.println("Enter principal amount");
+					double compoundPrincipal = sc.nextDouble();
+					System.out.println("Enter rate of interest");
+					double compoundRateOfInterest = sc.nextDouble()/100.0;
+					System.out.println("no.of years deposited");
+					double compoundNoOfYearsDeposited = sc.nextDouble();
+					System.out.println("compounded times");
+					int compoundedTimes = sc.nextInt();
+					double compoundInterest = SimpleInterest_CompoundInterest.compoundInterest(compoundPrincipal,compoundRateOfInterest,compoundNoOfYearsDeposited,compoundedTimes);
+					System.out.println("compound interest is " + compoundInterest);
+					break;
+					
+				default:System.out.println("enter correct option");
+						break;
+				
+			}
+			
+			
+			sc.close();
+		
+
+	}
+
+}
