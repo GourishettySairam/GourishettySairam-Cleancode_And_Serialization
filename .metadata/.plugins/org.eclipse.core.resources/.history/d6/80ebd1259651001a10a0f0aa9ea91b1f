@@ -23,13 +23,11 @@ public class HouseConstructionCost
 			{
 				if(fullyAutomatedHome)
 				{
-					costPerSquareFeet = 2500;
-					totalCost = areaOfHouse * costPerSquareFeet;
+					totalCost = areaOfHouse * 2500;
 				}
 				else
 				{
-					costPerSquareFeet = 1800;
-					totalCost = areaOfHouse * costPerSquareFeet;
+					totalCost = areaOfHouse * 1800;
 				}
 			}
 				

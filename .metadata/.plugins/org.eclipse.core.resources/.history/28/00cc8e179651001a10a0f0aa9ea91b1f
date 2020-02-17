@@ -10,26 +10,24 @@ public class HouseConstructionCost
 		
 			if(materialStandard.compareTo("standard") == 0)
 			{
-				costPerSquareFeet = 1200; 
+				basicPrice = 1200; 
 				totalCost = areaOfHouse * costPerSquareFeet;
 			}
 			
 			else if(materialStandard.compareTo("above standard") == 0) 
 			{
-				costPerSquareFeet = 1500;
+				basicPrice = 1500;
 				totalCost =  areaOfHouse * costPerSquareFeet;
 			}
 			else if(materialStandard.compareTo("high standard") == 0) 
 			{
 				if(fullyAutomatedHome)
 				{
-					costPerSquareFeet = 2500;
-					totalCost = areaOfHouse * costPerSquareFeet;
+					totalCost = areaOfHouse * 2500;
 				}
 				else
 				{
-					costPerSquareFeet = 1800;
-					totalCost = areaOfHouse * costPerSquareFeet;
+					totalCost = areaOfHouse * 1800;
 				}
 			}
 				

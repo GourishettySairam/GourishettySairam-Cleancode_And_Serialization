@@ -1,0 +1,32 @@
+package com.epam.CLEANCODE_AND_SERIALIZATION;
+
+public class HouseConstructionCost 
+{
+	
+	public static double cost(String materialStandard,double areaOfHouse,boolean fullyAutomatedHome)
+	{
+		int basicPrice;
+		double totalCost=0;
+		switch(materialStandard)
+		{
+			case "standard" : 
+				basicPrice = 1200; 
+				totalCost = areaOfHouse * basicPrice;
+			case "above standard" :
+				basicPrice = 1500;
+				totalCost =  areaOfHouse * basicPrice;
+			case "high standard" :
+				if(fullyAutomatedHome)
+				{
+					totalCost = areaOfHouse * 2500;
+				}
+				else
+				{
+					totalCost = areaOfHouse * 1800;
+				}
+				
+		}
+		return totalCost;
+	}
+	
+}
